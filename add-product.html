@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add Product – My Business</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header>
+    <img src="img/logo.png" alt="Logo" id="logo" />
+    <h1>My Business</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="products.html">View Products</a>
+      <a class="admin-only" href="add-product.html">Add Product</a>
+      <a class="admin-only" href="products.html?admin=true">Manage Products</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact-details.html">Our Contact Details</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Add a New Product</h2>
+    <form id="product-form">
+  <label>Product Name:
+    <input id="product-name" type="text" required>
+  </label>
+  <label>Description:
+    <textarea id="product-description" required></textarea>
+  </label>
+  <label>Image:
+    <input id="product-image" type="file" accept="image/*" required>
+  </label>
+  <button type="submit">Save Product</button>
+</form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Business</p>
+  </footer>
+
+  <!-- Firebase core SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<!-- Firebase Storage SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage-compat.js"></script>
+<!-- Your Firebase config + init -->
+<script>
+  const firebaseConfig = {
+  apiKey: "AIzaSyCkCM6qJusd2cs3_Fd-R1jCT2xT-uzGixM",
+  authDomain: "mybusinesssite-3a557.firebaseapp.com",
+  projectId: "mybusinesssite-3a557",
+  storageBucket: "mybusinesssite-3a557.firebasestorage.app",
+  messagingSenderId: "581418758686",
+  appId: "1:581418758686:web:35bbafe87ab9279018340f"
+};
+  firebase.initializeApp(firebaseConfig);
+  const storage = firebase.storage();
+</script>
+<!-- Your application JS -->
+
+  <!-- 4) Your application JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>
